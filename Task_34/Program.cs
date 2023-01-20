@@ -4,7 +4,7 @@
 
 int getIntFromUser(string message)  
 {
-    Console.Write(message);
+    Console.WriteLine(message);
     int userInt = int.Parse(Console.ReadLine()!);
     return userInt;
 }
@@ -34,8 +34,7 @@ void PrintArray(int[] array)
 }
 
 
-Console.WriteLine("Введите размер массива");
-int size = int.Parse(Console.ReadLine()!);
+int size = getIntFromUser ("Введите размер массива");
 int[] arr = new int[size];
 FillArrayRandomNumbers(arr);
 Console.WriteLine("Получен массив: ");
